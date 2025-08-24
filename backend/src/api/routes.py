@@ -65,30 +65,30 @@ async def recognize_face_route(request: FaceRecognizeRequest):
         
         result = recognize_face(request.image)
         
-        # Nếu nhận diện thành công, gửi lệnh mở cửa
-        if result.get("recognized", False):
-            recognized_name = result.get("name", "Unknown")
+        # # Nếu nhận diện thành công, gửi lệnh mở cửa
+        # if result.get("recognized", False):
+        #     recognized_name = result.get("name", "Unknown")
             
-            try:
-                # Gửi lệnh mở cửa cho tất cả thiết bị
-                devices = await door_service.get_all_devices()
-                for device in devices:
-                    if device["status"] == "online":
-                        await door_service.send_door_command(
-                            device["device_id"], 
-                            "open_door", 
-                            recognized_name
-                        )
-                        logger.info(f"Door open command sent to {device['device_id']} for {recognized_name}")
+        #     try:
+        #         # Gửi lệnh mở cửa cho tất cả thiết bị
+        #         devices = await door_service.get_all_devices()
+        #         for device in devices:
+        #             if device["status"] == "online":
+        #                 await door_service.send_door_command(
+        #                     device["device_id"], 
+        #                     "open_door", 
+        #                     recognized_name
+        #                 )
+        #                 logger.info(f"Door open command sent to {device['device_id']} for {recognized_name}")
                 
-                # Thêm thông tin door command vào response
-                result["door_command_sent"] = True
-                result["devices_notified"] = len([d for d in devices if d["status"] == "online"])
+        #         # Thêm thông tin door command vào response
+        #         result["door_command_sent"] = True
+        #         result["devices_notified"] = len([d for d in devices if d["status"] == "online"])
                 
-            except Exception as door_error:
-                logger.error(f"Door command error: {door_error}")
-                result["door_command_sent"] = False
-                result["door_error"] = str(door_error)
+        #     except Exception as door_error:
+        #         logger.error(f"Door command error: {door_error}")
+        #         result["door_command_sent"] = False
+        #         result["door_error"] = str(door_error)
         
         return {
             "success": True, 

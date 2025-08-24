@@ -3,7 +3,7 @@
     "name": "Feliss",
     "model_name": "Facenet512",
     "added_date": "2025-08-23T00:17:01.004027",
-    "recognition_count": 27,
+    "recognition_count": 37,
     "variations": [
       {
         "type": "default",
@@ -14,6 +14,83 @@
     ],
     "total_variations": 1,
     "last_updated": "2025-08-23T00:17:01.004027",
-    "last_recognized": "2025-08-23T09:32:35.088512"
+    "last_recognized": "2025-08-23T10:38:50.865254"
+  },
+  {
+    "name": "cam",
+    "model_name": "Facenet512",
+    "added_date": "2025-08-23T10:36:31.913080",
+    "recognition_count": 7,
+    "variations": [
+      {
+        "type": "default",
+        "image_path": "data/faces/cam_default_20250823_103610.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_default_20250823_103610.jpg?",
+        "added_date": "2025-08-23T10:36:31.913082"
+      },
+      {
+        "type": "default",
+        "image_path": "data/faces/cam_default_20250823_103640.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_default_20250823_103640.jpg?",
+        "added_date": "2025-08-23T10:36:41.610269"
+      },
+      {
+        "type": "with_glasses",
+        "image_path": "data/faces/cam_with_glasses_20250823_103650.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_with_glasses_20250823_103650.jpg?",
+        "added_date": "2025-08-23T10:36:51.316476"
+      },
+      {
+        "type": "no_glasses",
+        "image_path": "data/faces/cam_no_glasses_20250823_103656.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_no_glasses_20250823_103656.jpg?",
+        "added_date": "2025-08-23T10:37:17.256002"
+      },
+      {
+        "type": "no_glasses",
+        "image_path": "data/faces/cam_no_glasses_20250823_103718.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_no_glasses_20250823_103718.jpg?",
+        "added_date": "2025-08-23T10:37:18.373904"
+      },
+      {
+        "type": "no_glasses",
+        "image_path": "data/faces/cam_no_glasses_20250823_103719.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_no_glasses_20250823_103719.jpg?",
+        "added_date": "2025-08-23T10:37:19.695727"
+      },
+      {
+        "type": "slight_smile",
+        "image_path": "data/faces/cam_slight_smile_20250823_103724.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_slight_smile_20250823_103724.jpg?",
+        "added_date": "2025-08-23T10:37:24.460260"
+      },
+      {
+        "type": "serious",
+        "image_path": "data/faces/cam_serious_20250823_103811.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_serious_20250823_103811.jpg?",
+        "added_date": "2025-08-23T10:38:12.525093"
+      },
+      {
+        "type": "serious",
+        "image_path": "data/faces/cam_serious_20250823_103813.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_serious_20250823_103813.jpg?",
+        "added_date": "2025-08-23T10:38:13.398315"
+      },
+      {
+        "type": "serious",
+        "image_path": "data/faces/cam_serious_20250823_103814.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_serious_20250823_103814.jpg?",
+        "added_date": "2025-08-23T10:38:14.555743"
+      },
+      {
+        "type": "serious",
+        "image_path": "data/faces/cam_serious_20250823_103815.jpg",
+        "image_url": "https://psftpgbisqpvwmrlmjab.supabase.co/storage/v1/object/public/faces/cam_serious_20250823_103815.jpg?",
+        "added_date": "2025-08-23T10:38:15.565707"
+      }
+    ],
+    "total_variations": 11,
+    "last_updated": "2025-08-23T10:38:15.565712",
+    "last_recognized": "2025-08-24T16:20:10.308032"
   }
 ]
