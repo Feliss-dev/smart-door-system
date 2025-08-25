@@ -102,8 +102,11 @@ export function VoiceInterface({
   } = useAudioPlayer();
 
   // Face detection for internal camera
+  // Add attemptsRef and maxAttempts for face detection
+  const attemptsRef = useRef<number>(0);
+  const maxAttempts = 5; // You can adjust this value as needed
   const { detectedFaces, modelsLoaded, startDetection, stopDetection } =
-    useFaceDetection(videoRef, canvasRef);
+    useFaceDetection(videoRef, canvasRef, attemptsRef, maxAttempts);
 
   // Camera support check
   const checkCameraSupport = useCallback(() => {
@@ -453,17 +456,26 @@ export function VoiceInterface({
   };
 
   // Auto-play AI responses
+  // Prevent repeated AI voice playback
+  const [lastPlayedAudioId, setLastPlayedAudioId] = useState<string | null>(
+    null
+  );
   useEffect(() => {
     if (messages.length > 0) {
       const lastMessage = messages[messages.length - 1];
-      if (lastMessage.type === "ai" && lastMessage.audioBase64 && !isPlaying) {
-        // Auto-play the latest AI response
+      if (
+        lastMessage.type === "ai" &&
+        lastMessage.audioBase64 &&
+        !isPlaying &&
+        lastMessage.id !== lastPlayedAudioId
+      ) {
         setTimeout(() => {
           handlePlayAudio(lastMessage);
+          setLastPlayedAudioId(lastMessage.id);
         }, 500);
       }
     }
-  }, [messages, isPlaying]);
+  }, [messages, isPlaying, lastPlayedAudioId]);
 
   // Show error if speech recognition not supported in voice mode
   if (mode === "voice" && !isSupported) {
